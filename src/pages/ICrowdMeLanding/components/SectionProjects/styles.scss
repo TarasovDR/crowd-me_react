@@ -1,0 +1,61 @@
+@import '../../../../styles/constants/index.scss';
+@import '../../../../styles/mixins';
+
+.projects {
+  background-color: $white;
+
+  &__content {
+    min-height: 800px;
+    padding: 50px 0;
+
+    @media screen and (max-width: $deviceSizeXS) {
+      padding: 50px 0;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $deviceSizeMD) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media screen and (max-width: $deviceSizeXS) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-title--block {
+      max-width: 670px;
+    }
+  }
+
+  &__button {
+    max-width: 50px;
+  }
+
+  &__cards-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  // &__card {
+  // }
+
+  // &__slider {
+  //   .slick-slide {
+  //     & > div {
+  //       & > div {
+  //         // max-width: 326x;
+  //         padding: 0 12px;
+  //         margin: 0 48px;
+  //       }
+  //     }
+  //   }
+  // }
+}

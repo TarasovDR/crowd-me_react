@@ -1,0 +1,64 @@
+@import '../../styles/constants/index.scss';
+@import '../../styles/_mixins.scss';
+
+.modal {
+  position: fixed;
+  z-index: 10000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  @include display-flex(row, center, center);
+  overflow: hidden;
+  pointer-events: none;
+
+  // Modify
+
+  &--is-open {
+    z-index: 2000;
+    pointer-events: auto;
+
+    .modal__content {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: modal-content 0.4s 0.2s forwards;
+    }
+
+    .modal__backdrop {
+      opacity: 0;
+      animation: show 0.15s forwards;
+    }
+  }
+
+  &__content {
+    background-image: url('../../assets/images/Layer\ 16.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $borderRadius;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+    position: relative;
+    min-height: 366px;
+    max-height: 550px;
+    overflow: auto;
+    width: 100%;
+    padding: 1.125rem;
+    margin: 2rem 1rem;
+    z-index: 10001;
+    max-width: 600px;
+  }
+
+  &__close-icon-wrapper {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  &__backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

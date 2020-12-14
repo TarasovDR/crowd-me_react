@@ -1,0 +1,13 @@
+@import '../../styles/constants/index.scss';
+
+.content-container {
+  padding: 0 24px;
+
+  &__inner-wrapper {
+    margin: 0 auto;
+
+    @media screen and (max-width: $deviceSizeLG) {
+      max-width: 1200px;
+    }
+  }
+}

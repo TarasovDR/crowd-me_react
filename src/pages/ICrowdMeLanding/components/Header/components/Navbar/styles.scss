@@ -1,0 +1,38 @@
+@import '../../../../../../styles/constants/index.scss';
+@import '../../../../../../styles/mixins';
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (max-width: $deviceSizeMD) {
+    display: none;
+  }
+
+  &__item {
+    color: $textSecondary;
+    text-transform: uppercase;
+    font-weight: $fontWeightMedium;
+    font-size: 0.9rem;
+    padding: 2px 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: color $animTimeFast ease, border-color $animTimeFast ease,
+      background-color $animTimeFast ease;
+
+    &:hover {
+      border-top: 3px solid $primaryGreen;
+      color: $black;
+    }
+
+    &--active {
+      border-bottom: 3px solid $primaryGreen;
+
+      a {
+        color: $primaryGreen;
+      }
+    }
+  }
+}

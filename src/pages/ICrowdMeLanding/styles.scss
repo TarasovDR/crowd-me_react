@@ -1,0 +1,11 @@
+.landing {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+
+  &__button-up-wrapper {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+}

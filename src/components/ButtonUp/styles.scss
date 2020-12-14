@@ -1,0 +1,26 @@
+@import '../../styles/constants/index.scss';
+@import '../../styles/_mixins.scss';
+
+.button-up {
+  @include display-flex(row, center, center);
+  width: 50px;
+  height: 100vh;
+  background: linear-gradient(transparent, rgb(230, 230, 230));
+  transition: background-color $animTimeFast ease, opacity $animTimeFast ease,
+    color $animTimeFast ease;
+  pointer-events: none;
+  opacity: 0;
+  color: $textPrimary;
+
+  &:hover {
+    background: linear-gradient(transparent, rgb(220, 220, 220));
+  }
+
+  // Modified
+
+  &--visible {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}

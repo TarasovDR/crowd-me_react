@@ -1,0 +1,66 @@
+@import '../../styles/constants/index.scss';
+@import '../../styles/_mixins.scss';
+
+.font-icon {
+  vertical-align: middle;
+
+  &--xs {
+    font-size: 12px;
+  }
+
+  &--sm {
+    font-size: 16px;
+  }
+
+  &--md {
+    font-size: 20px;
+  }
+
+  &--lg {
+    font-size: 24px;
+  }
+
+  &--xl {
+    font-size: 28px;
+  }
+
+  &--xxl {
+    font-size: 32px;
+  }
+
+  &--xxxl {
+    font-size: 36px;
+  }
+
+  &--xxxxl {
+    font-size: 56px;
+  }
+
+  &--max {
+    font-size: 200px;
+  }
+
+  &--rotate45 {
+    transform: rotate(45deg);
+  }
+
+  &--rotate90 {
+    transform: rotate(90deg);
+  }
+
+  &--rotate180 {
+    transform: rotate(180deg);
+  }
+
+  &--color-green {
+    color: $primaryGreen;
+  }
+
+  &--color-white {
+    color: $white;
+  }
+
+  &--color-grey {
+    color: $textPrimary;
+  }
+}

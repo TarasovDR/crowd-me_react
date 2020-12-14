@@ -1,0 +1,34 @@
+@import '../../styles/constants/index.scss';
+@import '../../styles/_mixins.scss';
+
+.slider {
+  width: 92%;
+
+  @media screen and (max-width: $deviceSizeMD) {
+    width: 88%;
+  }
+
+  @media screen and (max-width: $deviceSizeXS) {
+    width: 80%;
+  }
+}
+
+.slick-slider {
+  padding: 24px;
+
+  @media screen and (max-width: $deviceSizeMD) {
+    padding: 0;
+  }
+}
+.projects-next-arrow,
+.projects-prev-arrow {
+  z-index: 3;
+  // &:before {
+  //   display: none;
+  // }
+  .font-icon {
+    &:hover {
+      color: $primaryGreen;
+    }
+  }
+}
